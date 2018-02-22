@@ -1,0 +1,21 @@
+ <div class="container">
+<form #pagamentosForm="ngForm" (ngSubmit)="enviar()">
+  <!-- <pre>{{ model | json}}</pre> -->
+  <div class="form-group">
+    <label for="valor">Valor</label>
+    <input type="number" id="valor" name=valor 
+      [(ngModel)]="model.valor" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="troco">Troco</label>
+    <input type="number" id="troco" name=troco 
+      [(ngModel)]="model.troco" class="form-control" />
+  </div>
+
+  <div class="text-center">
+    <input type="submit" class="btn btn-primary" value="Enviar" />
+    <button type="button" class="btn btn-danger" routerLink="/pagamentos">Voltar</button>
+  </div>
+</form>
+</div> 
